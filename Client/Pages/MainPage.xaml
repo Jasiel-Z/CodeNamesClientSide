@@ -1,0 +1,19 @@
+﻿<Page x:Class="Client.Pages.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Client.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Background="Coral"
+      Title="MainPage">
+
+    <Grid>
+        <Button x:Name="LanguageButton_Copiar" Content="Crear partida" Foreground="AliceBlue" HorizontalAlignment="Center" Margin="0,33,0,0" VerticalAlignment="Top" Height="61" Width="284" Click="LanguageButton_Click" Background="#FF5FAA46" FontSize="38"/>
+        <Button x:Name="LanguageButton_Copiar1" Content="Unirse a partida" Foreground="AliceBlue" HorizontalAlignment="Center" Margin="0,114,0,0" VerticalAlignment="Top" Height="61" Width="284" Click="LanguageButton_Click" Background="#FF5FAA46" FontSize="38"/>
+        <Button x:Name="LanguageButton_Copiar2" Content="Ajustes" Foreground="AliceBlue" HorizontalAlignment="Center" VerticalAlignment="Top" Height="62" Width="284" Click="LanguageButton_Click" Background="#FF5FAA46" FontSize="38" Margin="0,192,0,0"/>
+        <Button x:Name="LanguageButton_Copiar3" Content="Social" Foreground="AliceBlue" HorizontalAlignment="Center" Margin="0,274,0,0" VerticalAlignment="Top" Height="61" Width="284" Click="LanguageButton_Click" Background="#FF5FAA46" FontSize="40"/>
+        <Button x:Name="LanguageButton_Copiar4" Content="Salir del juego" Foreground="AliceBlue" HorizontalAlignment="Center" Margin="0,357,0,0" VerticalAlignment="Top" Height="61" Width="284" Click="LanguageButton_Click" Background="#FFD5122A" FontSize="40"/>
+    </Grid>
+</Page>

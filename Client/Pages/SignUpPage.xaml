@@ -1,0 +1,25 @@
+﻿<Page x:Class="Client.Pages.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Client.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Background="Coral"
+      Title="LoginPage">
+
+    <Grid>
+        <Label Content="Regístrate en 'CodeNames'" Foreground ="AliceBlue" HorizontalAlignment="Left" Margin="48,50,0,0" VerticalAlignment="Top" FontSize="24" Width="324"/>
+        <Label Content="Nombre de usuario" Foreground="AliceBlue" HorizontalAlignment="Left" Margin="48,103,0,0" VerticalAlignment="Top" Height="36" Width="241" FontSize="24"/>
+        <Button x:Name="SignIn" Content="Crear cuenta" Foreground="AliceBlue" HorizontalAlignment="Left" Margin="475,376,0,0" VerticalAlignment="Top" Height="38" Width="145" Click="SignInButton_Click" Background="#FF5FAA46" FontSize="24"/>
+        <Button x:Name="CancelButton" Content="Cancelar" Foreground="AliceBlue" HorizontalAlignment="Left" Margin="244,376,0,0" VerticalAlignment="Top" Height="38" Width="128" Click="CancelButton_Click" Background="#FFD5122A" FontSize="24" RenderTransformOrigin="-2.799,-2.869"/>
+        <Label Content="Correo electrónico" Foreground="AliceBlue" HorizontalAlignment="Left" Margin="436,103,0,0" VerticalAlignment="Top" Height="36" Width="241" FontSize="24"/>
+        <Label Content="Contraseña" Foreground="AliceBlue" HorizontalAlignment="Left" Margin="48,0,0,0" VerticalAlignment="Center" Height="36" Width="241" FontSize="24"/>
+        <Label Content="Confirmación de contraseña" Foreground="AliceBlue" HorizontalAlignment="Left" Margin="436,0,0,0" VerticalAlignment="Center" Height="36" Width="314" FontSize="24"/>
+        <TextBox x:Name="TB_Nickname" HorizontalAlignment="Left" Margin="48,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" Height="37" />
+        <TextBox x:Name="TB_Password" HorizontalAlignment="Left" Margin="48,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" Height="37" />
+        <TextBox x:Name="TB_Email" HorizontalAlignment="Left" Margin="436,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" Height="37" />
+        <TextBox x:Name="TB_ConfirmPassword" HorizontalAlignment="Left" Margin="436,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" Height="37" />
+    </Grid>
+</Page>
