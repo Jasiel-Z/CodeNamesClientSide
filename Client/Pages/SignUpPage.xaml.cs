@@ -11,6 +11,7 @@ using System.Text.RegularExpressions;
 
 namespace Client.Pages
 {
+
     public partial class SignUpPage : Page
     {
         public SignUpPage()
