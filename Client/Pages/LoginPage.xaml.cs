@@ -20,9 +20,9 @@ namespace Client.Pages
     /// <summary>
     /// Lógica de interacción para SignUpPage.xaml
     /// </summary>
-    public partial class SignUpPage : Page
+    public partial class LoginPage : Page
     {
-        public SignUpPage()
+        public LoginPage()
         {
             InitializeComponent();
         }
@@ -109,6 +109,7 @@ namespace Client.Pages
         private void LoginAction(string nickname, string password)
         {
             ServiceReference1.IDatabaseService client = new ServiceReference1.DatabaseServiceClient();
+            //UserAccount user = client.Login();
         }
     }
 }
