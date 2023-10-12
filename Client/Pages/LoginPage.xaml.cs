@@ -18,9 +18,9 @@ namespace Client.Pages
     /// <summary>
     /// Lógica de interacción para SignUpPage.xaml
     /// </summary>
-    public partial class SignUpPage : Page
+    public partial class LoginPage : Page
     {
-        public SignUpPage()
+        public LoginPage()
         {
             InitializeComponent();
         }
