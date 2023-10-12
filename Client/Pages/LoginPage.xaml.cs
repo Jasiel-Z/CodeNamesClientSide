@@ -31,13 +31,14 @@ namespace Client.Pages
         {
             var username = TbNickname.Text;
             var password = PsbPassword.Password;
+
             if (!String.IsNullOrWhiteSpace(username) && !String.IsNullOrWhiteSpace(password))
             {
                 if (AreValidStrings(username, password) && AreTooLongStrings(username, password))
                 {
                     try
                     {
-                       // LoginAction(username, password);
+                        LoginAction(username, password);
                     }
                     catch (EndpointNotFoundException ex)
                     {
@@ -61,39 +62,29 @@ namespace Client.Pages
                 }
                 else
                 {
-                   // MessageBox.Show(Properties.Resources.LOGIN_INVALIDFORMAT_MESSAGE, Properties.Resources.GENERAL_WARNING_TITLE, MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("Se identificaron caracteres inválidos en la información ingresada", "Información con caracteres inválidos", MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
             }
             else
             {
-                //MessageBox.Show(Properties.Resources.LOGIN_NOUSERORPASSWORD_MESSAGE, Properties.Resources.GENERAL_WARNING_TITLE, MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Debes ingresar el correo y la contraseña", "Datos incompletos", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
         private void BtnLogInInvite_Click(object sender, RoutedEventArgs e)
         {
+            NavigationService?.Navigate(new MainPage());
 
         }
 
         private void BtnSignUp_Click(object sender, RoutedEventArgs e)
         {
-           
+            NavigationService?.Navigate(new SignUpPage());
         }
 
         private void BtnChangeLanguage_Click(object sender, RoutedEventArgs e)
         {
 
-        }
-
-
-
-
-
-
-        private void ShowMessage(string message, string title)
-        {
-
-            MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private bool AreValidStrings(string username, string password)
@@ -107,12 +98,17 @@ namespace Client.Pages
         }
         private bool AreTooLongStrings(string username, string password)
         {
-            var isntTooLong = false;
-            if (username.Length <= 45 || password.Length <= 16)
+            var areValidSize = false;
+            if (username.Length <= 40 || password.Length <= 40)
             {
-                isntTooLong = true;
+                areValidSize = true;
             }
-            return isntTooLong;
+            return areValidSize;
+        }
+
+        private void LoginAction(string nickname, string password)
+        {
+            ServiceReference1.IDatabaseService client = new ServiceReference1.DatabaseServiceClient();
         }
     }
 }
