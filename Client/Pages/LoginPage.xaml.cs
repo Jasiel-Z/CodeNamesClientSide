@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -28,9 +29,44 @@ namespace Client.Pages
 
         private void BtnLogIn_Click(object sender, RoutedEventArgs e)
         {
-            if (ValidateCards())
+            var username = TbNickname.Text;
+            var password = PsbPassword.Password;
+            if (!String.IsNullOrWhiteSpace(username) && !String.IsNullOrWhiteSpace(password))
             {
-                ShowMessage("Validando la autenticidad de los datos", "Credenciales válidas");
+                if (AreValidStrings(username, password) && AreTooLongStrings(username, password))
+                {
+                    try
+                    {
+                       // LoginAction(username, password);
+                    }
+                    catch (EndpointNotFoundException ex)
+                    {
+                        //Log.Error($"{ex.Message}");
+                        //MessageBox.Show(Properties.Resources.GENERAL_NOCONNECTION_MESSAGE, Properties.Resources.GENERAL_ERROR_TITLE, MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                    catch (CommunicationObjectFaultedException ex)
+                    {
+                        //Log.Error($"{ex.Message}");
+                        //MessageBox.Show(Properties.Resources.GENERAL_NOCONNECTION_MESSAGE, Properties.Resources.GENERAL_ERROR_TITLE, MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                    catch (TimeoutException ex)
+                    {
+                        //Log.Error($"{ex.Message}");
+                       // MessageBox.Show(Properties.Resources.GENERAL_NOCONNECTION_MESSAGE, Properties.Resources.GENERAL_ERROR_TITLE, MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                    finally
+                    {
+                        //client.Abort();
+                    }
+                }
+                else
+                {
+                   // MessageBox.Show(Properties.Resources.LOGIN_INVALIDFORMAT_MESSAGE, Properties.Resources.GENERAL_WARNING_TITLE, MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+            }
+            else
+            {
+                //MessageBox.Show(Properties.Resources.LOGIN_NOUSERORPASSWORD_MESSAGE, Properties.Resources.GENERAL_WARNING_TITLE, MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
@@ -41,37 +77,18 @@ namespace Client.Pages
 
         private void BtnSignUp_Click(object sender, RoutedEventArgs e)
         {
-
+           
         }
 
         private void BtnChangeLanguage_Click(object sender, RoutedEventArgs e)
         {
 
         }
-        public Boolean ValidateCards()
-        {
-            string nickname = TbNickname.Text;
-            string password = PsbPassword.Password;
 
-            // Verifica si el campo "nickname" está vacío o supera los 40 caracteres.
 
-            Boolean isValid = true;
-            if (string.IsNullOrWhiteSpace(nickname) || nickname.Length > 40)
-            {
 
-                isValid = false;
-            }
 
-            // Verifica si el campo "password" está vacío o supera los 40 caracteres.
-            if (string.IsNullOrWhiteSpace(password) || password.Length > 40)
-            {
 
-                isValid = false;
-            }
-
-            // Si ninguno de los campos tiene problemas, entonces los datos son válidos.
-            return true;
-        }
 
         private void ShowMessage(string message, string title)
         {
@@ -87,6 +104,15 @@ namespace Client.Pages
                 isValid = true;
             }
             return isValid;
+        }
+        private bool AreTooLongStrings(string username, string password)
+        {
+            var isntTooLong = false;
+            if (username.Length <= 45 || password.Length <= 16)
+            {
+                isntTooLong = true;
+            }
+            return isntTooLong;
         }
     }
 }
