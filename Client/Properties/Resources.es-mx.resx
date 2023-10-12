@@ -118,24 +118,24 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CancelButton" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Cancelar</value>
   </data>
   <data name="EmailLabel" xml:space="preserve">
-    <value>Email</value>
+    <value>Correo electrónico</value>
   </data>
   <data name="NicknameLabel" xml:space="preserve">
-    <value>Nickname</value>
+    <value>Nombre de usuario</value>
   </data>
   <data name="PasswordConfirmationLabel" xml:space="preserve">
-    <value>Confirmation Password</value>
+    <value>Confirmación de contraseña</value>
   </data>
   <data name="PasswordLabel" xml:space="preserve">
-    <value>Password</value>
+    <value>Constraseña</value>
   </data>
   <data name="SignUpButton" xml:space="preserve">
-    <value>Sign Up</value>
+    <value>Regístrate</value>
   </data>
   <data name="SignUpCodeNamesLabel" xml:space="preserve">
-    <value>Sign Up into CodeNames</value>
+    <value>Regístrate en CodeNames</value>
   </data>
 </root>
