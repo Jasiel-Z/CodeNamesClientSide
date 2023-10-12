@@ -10,14 +10,15 @@
       Title="SignUpPage">
 
     <Grid Margin="0,-2,0,2">
-        <Button x:Name="LanguageButton" Content="English-US" Foreground="AliceBlue" HorizontalAlignment="Left" Margin="31,35,0,0" VerticalAlignment="Top" Height="49" Width="149" Click="LanguageButton_Click" Background="{x:Null}" FontSize="24"/>
-        <Label Content="Iniciar sesión" Foreground ="AliceBlue" HorizontalAlignment="Left" Margin="468,39,0,0" VerticalAlignment="Top" FontSize="44" Width="326"/>
-        <Label Content="Nombre de usuario" Foreground="AliceBlue" HorizontalAlignment="Left" Margin="459,115,0,0" VerticalAlignment="Top" Height="36" Width="241" FontSize="24"/>
-        <TextBox HorizontalAlignment="Left" Margin="459,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="291" Height="40" FontSize="24" TextChanged="TextBox_TextChanged_1"/>
-        <Label Content="Contraseña" Foreground="AliceBlue" HorizontalAlignment="Left" Margin="459,215,0,0" VerticalAlignment="Top" Height="36" Width="241" FontSize="24"/>
-        <TextBox HorizontalAlignment="Left" Margin="459,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="291" Height="40" FontSize="24"/>
-        <Button x:Name="LanguageButton_Copiar" Content="Ingresar" Foreground="AliceBlue" HorizontalAlignment="Left" Margin="459,330,0,0" VerticalAlignment="Top" Height="38" Width="128" Click="LanguageButton_Click" Background="#FF5FAA46" FontSize="24"/>
-        <Button x:Name="LanguageButton_Copiar1" Content="Registrarse" Foreground="AliceBlue" HorizontalAlignment="Left" Margin="620,328,0,0" VerticalAlignment="Top" Height="38" Width="128" Click="LanguageButton_Click" Background="#FF5FAA46" FontSize="24"/>
-        <Button x:Name="LanguageButton_Copiar2" Content="Ingresar como invitado" Foreground="AliceBlue" HorizontalAlignment="Left" Margin="459,382,0,0" VerticalAlignment="Top" Height="38" Width="291" Click="LanguageButton_Click" Background="#FF5FAA46" FontSize="24"/>
+        <Button x:Name="LanguageButton" Content="English-US" Foreground="AliceBlue" HorizontalAlignment="Left" Margin="31,35,0,0" VerticalAlignment="Top" Height="49" Width="149" Click="BtnChangeLanguage_Click" Background="{x:Null}" FontSize="24"/>
+        <Label Content="Inicio de  sesión" Foreground ="AliceBlue" HorizontalAlignment="Left" Margin="450,19,0,0" VerticalAlignment="Top" FontSize="44" Width="326"/>
+        <Label Content="Nombre de usuario" Foreground="AliceBlue" HorizontalAlignment="Left" Margin="459,83,0,0" VerticalAlignment="Top" Height="36" Width="241" FontSize="24"/>
+        <TextBox x:Name="TbNickname" HorizontalAlignment="Left" Margin="459,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="291" Height="40" FontSize="24"/>
+        <Label Content="Contraseña" Foreground="AliceBlue" HorizontalAlignment="Left" Margin="459,173,0,0" VerticalAlignment="Top" Height="36" Width="241" FontSize="24"/>
+        <Button x:Name="BtnLogIn" Content="Iniciar sesión" Foreground="AliceBlue" HorizontalAlignment="Left" Margin="459,310,0,0" VerticalAlignment="Top" Height="38" Width="291" Click="BtnLogIn_Click" Background="#FF5FAA46" FontSize="24"/>
+        <Button x:Name="BtnSignUp" Content="Crear cuenta" Foreground="AliceBlue" HorizontalAlignment="Left" Margin="459,403,0,0" VerticalAlignment="Top" Height="38" Width="291" Click="BtnSignUp_Click" Background="#FF1B7F77" FontSize="24" RenderTransformOrigin="-0.057,0.65"/>
+        <Button x:Name="BtnLogInInvite" Content="Ingresar como invitado" Foreground="AliceBlue" HorizontalAlignment="Left" Margin="459,356,0,0" VerticalAlignment="Top" Height="38" Width="291" Click="BtnLogInInvite_Click" Background="#FF26A188" FontSize="24"/>
+        <Label x:Name ="ResetPassword" Content="Recuperar contraseña" Foreground="AliceBlue" HorizontalAlignment="Left" Margin="460,267,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <PasswordBox x:Name="PsbPassword" HorizontalAlignment="Left" Margin="460,222,0,0" VerticalAlignment="Top" Width="290" Height="38"/>
     </Grid>
 </Page>
